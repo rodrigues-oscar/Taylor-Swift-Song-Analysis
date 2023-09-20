@@ -6,7 +6,7 @@ As a **_lover_** of Taylor Swift's music, **_this is me trying_** to leverage my
 
 ## Part 1: Extracting Taylor Swift Song Data From Spotify
 
-With no data, all we have is a **_blank space_**. So first, we need to get data on music from Taylor Swift - I have written a Python script that utilizes the Spotipy library to fetch detailed data about Taylor Swift's albums and tracks from the Spotify API. The key steps include:
+First, we need to get data on music from Taylor Swift. To do this, I have written a Python script that utilizes the Spotipy library to fetch detailed data about Taylor Swift's albums, tracks, and their audio features from the Spotify API. The key steps include:
 
 - Setting up API credentials securely from environment variables.
 - Searching for Taylor Swift as the artist and obtaining her unique artist URI.
