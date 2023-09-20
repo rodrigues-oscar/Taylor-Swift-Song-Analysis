@@ -2,7 +2,7 @@
 
 **_Dear Reader_**,
 
-As a **_lover_** of Taylor Swift's music, **_this is me trying_** to leverage my data science skills for a deeper analysis of her musical journey.
+As a **_lover_** of Taylor Swift's music, **_this is me trying_** to leverage my data science skills for a deeper analysis of her musical journey. I am going to start by generating a dataset of her music with the help of Spotify's API. Then, I will clean the dataset - this will allow me to perform statistical analyses which can uncover insights such as the relationship between the **_mean (taylor's version)_** tempo of an album and it's popularity.
 
 ## Part 1: Extracting Taylor Swift Song Data From Spotify
 
@@ -14,3 +14,7 @@ With no data, all we have is a **_blank space_**. So first, we need to get data 
 - Extracting track details, including name, number, duration, explicitness, popularity, and audio features.
 - Storing the collected data in a structured pandas data frame.
 - Saving the data frame to a CSV file for further analysis.
+
+## Contact Info
+
+If you have feedback or a **_question...?_**, please reach out to me at rodrigues-oscar@outlook.com
