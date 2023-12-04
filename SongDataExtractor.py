@@ -12,8 +12,8 @@ Docs: https://spotipy.readthedocs.io/en/2.22.1/#client-credentials-flow
 """
 
 load_dotenv() # Added .env file to .gitignore to hide Spotify API's client_id and client_secret from public GitHub repository
-clientId = os.getenv("CLIENT_ID")
-clientSecret = os.getenv("CLIENT_SECRET")
+clientId = os.getenv('CLIENT_ID')
+clientSecret = os.getenv('CLIENT_SECRET')
 clientCredentialsManager = SpotifyClientCredentials(
     client_id=clientId,
     client_secret=clientSecret
@@ -24,7 +24,7 @@ sp = spotipy.Spotify(client_credentials_manager=clientCredentialsManager)
 
 Here are the steps to extracting song data:
 
-1. Search by Artist for "Taylor Swift"
+1. Search by Artist for 'Taylor Swift'
 2. Get artist URI
 3. Search for Albums based on artist URI
 4. Get album names and URIs
@@ -36,11 +36,11 @@ Here are the steps to extracting song data:
 
 """
 
-artistName = "Taylor Swfit"
-searchForArtistResult = sp.search(q=artistName, limit=1, type="artist") # Searching for artist based on inputted string to get artist URI
-artistUri = searchForArtistResult["artists"]["items"][0]["uri"] # Accessing JSON object to retrieve artist URI
+artistName = 'Taylor Swift'
+searchForArtistResult = sp.search(q=artistName, limit=1, type='artist') # Searching for artist based on inputted string to get artist URI
+artistUri = searchForArtistResult['artists']['items'][0]['uri'] # Accessing JSON object to retrieve artist URI
 
-searchForAlbumsResult = sp.artist_albums(artistUri, album_type="album", limit=50) # Searching for albums based on artist URI to get album URIs
+searchForAlbumsResult = sp.artist_albums(artistUri, album_type='album', limit=50) # Searching for albums based on artist URI to get album URIs
 artistAlbums = searchForAlbumsResult['items'] # Accessing 'items' to traverse down one layer of JSON object
 numberOfAlbums = len(artistAlbums)
 
@@ -123,4 +123,4 @@ df = pd.DataFrame(trackDatabase, columns=[ # Converting list to dataframe
     'Track URI',
 ])
 
-df.to_csv('TaylorSwiftSongData.csv', index=False) # Save as CSV and drop index
+df.to_csv('rawSongData.csv', index=False) # Save as CSV and drop index
