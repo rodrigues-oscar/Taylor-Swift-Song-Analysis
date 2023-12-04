@@ -44,7 +44,7 @@ Track URI               object
 dtype: object
 ```
 
-However, We do have duplicates in our data.. kind of. Spotify treats an album and its deluxe version as two separate albums entirely. So I wrote a quick little Python script titled [SongDataCleaner.py](https://github.com/rodrigues-oscar/Taylor-Swift-Song-Analysis/blob/main/SongDataCleaner.py). In the script, I manually curated a list of the albums I wanted to keep (prioritizing Taylor's Version and then the deluxe version) and then used the [`Series.isin`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.isin.html) function to create a new dataframe with the albums I wanted.
+However, We do have duplicates in our data.. kind of. Spotify treats an album and its deluxe version as two separate albums entirely. So I wrote a quick little Python script titled [SongDataCleaner.py](https://github.com/rodrigues-oscar/Taylor-Swift-Song-Analysis/blob/main/SongDataCleaner.py). In the script, I manually curated a list of the albums I wanted to keep (prioritizing Taylor's Version and then version with most number of tracks) and then used the [`Series.isin`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.isin.html) function to create a new dataframe with the albums I wanted.
 
 ## Part 3: Generating Visualizations And Deriving Insights
 
