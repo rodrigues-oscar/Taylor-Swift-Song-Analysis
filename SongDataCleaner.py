@@ -16,4 +16,4 @@ albumsToBeKept= ['spotify:album:1o59UpKw81iHR0HPiSkJR0', # 1989 (Taylor's Versio
 df = df[df['Album URI'].isin(albumsToBeKept)]
 df = df.reset_index(drop=True)
 
-df.to_csv('cleanedSongData.csv')
+df.to_csv('cleanedSongData.csv', index=False)
